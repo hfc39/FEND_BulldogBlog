@@ -1,11 +1,22 @@
 body {
 	height: 100%;
-  background-color:linen;
+  background-color:#C9B9AD;
   font-family: 'Roboto Slab', serif;
-
 }
 
-h1,
+h1 {
+  font-family: 'Bree Serif','Roboto Slab', serif;
+  font-size: 40px;
+  color: #232628;
+}
+
+h1 hr {
+  /*border-bottom: 3px solid #232628;*/
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
 h2,
 h3,
 h4{
@@ -16,6 +27,7 @@ p{
   font-family: 'Roboto Slab', serif;
   line-height: normal;
   font-weight:400;
+  font-size: 14px;
 
 }
 
@@ -33,11 +45,11 @@ u{
 
 a{
   text-decoration: underline;
+  color: #0000CD;
 }
-a:hover{
-  background-color: gold;
+.intro {
+  display: none;
 }
-
 quote{
 
 }
@@ -45,7 +57,7 @@ quote{
 .container{
   width:95%;
   display: grid;
-  background-color: azure;
+  background-color: #C9B9AD;
   grid-template-columns: 1fr;
   grid-template-rows: 130px auto auto auto;
   grid-gap: 5px;
@@ -60,59 +72,71 @@ quote{
 .head{
     grid-area: hd;
     color: firebrick;
-    padding: 15px;
-    background-color:peachpuff;
+    padding: 10px 10px 10px;
+    background-color:#C9B9AD;
   }
 
 .sidebar{
   grid-area: sb;
   padding: 10px;
-  background-color:khaki;
+  background-color:#FAF5EF;
+}
 
+.sidebar a:hover {
+  background-color: gold;
 }
 
 .main{
   grid-area: main;
   padding: 5px;
-  background-color:lightsteelblue;
+  background-color:#C9B9AD;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  grid-gap: 5px;
+  grid-gap: 10px;
   padding: 10px auto 10px;
   max-height: 1000px;
   overflow-y: scroll;
 }
 .card {
   max-width: 400px;
-  background-color: lightseagreen;
   margin: 10px;
+  padding: auto;
+  border-radius: 8%;
+  border: 4px solid #FAF5EF;
+  background-color: #FAF5EF;
 }
 
 .card img {
   max-width: 100%;
-  height: auto;
+  text-align : center;
+  margin: auto;
+  padding: auto;
+  border-radius: 10%;
 }
 
 .card h3 {
   padding: 5px 8px 0;
-
 }
 .card p {
   max-height: 175px;
   padding: 8px;
-  border: 1px solid blue;
-
+  background-color: none;
+}
+.card p a:hover {
+  background-color: gold;
 }
 
 .card:hover {
-  outline: 5px solid pink;
+  min-width: 320px;
 }
+
 .footer{
   grid-area:ft;
   padding: 10px;
-  background-color:silver;
+  background-color:#C9B9AD;
+  text-align: center;
 }
 
 .nav {
@@ -141,6 +165,20 @@ quote{
       "sb sb main main main main"
       "ft ft ft ft ft ft";
     }
+    .sidebar{
+      grid-area: sb;
+      padding: 0 10px;
+      background-color:#C9B9AD;
+    }
+
+    .intro {
+      display: inline;
+    }
+    .intro p,
+    .intro h2 {
+      font-weight:200;
+    }
+
     .nav {
       display:flex;
       flex-direction: column;
@@ -148,7 +186,9 @@ quote{
       justify-content: flex-start;
       margin: none;
       position: relative;
-      top: 30%;
+      top: 5%;
+      line-height: 25px;
+
 
     }
     .nav li{
@@ -158,22 +198,25 @@ quote{
       text-align: left;
     }
 
+    .nav li:hover {
+      font-style:italic;
+    }
+
     .main{
       grid-area: main;
       padding: 5px;
-      background-color:lightsteelblue;
+      background-color:#C9B9AD;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
       grid-gap: 5px;
       padding: 10px auto 10px;
-      max-height: 1000px;
+      max-height: 1100px;
       overflow-x: scroll;
     }
     .card {
       min-width: 300px;
-      background-color: lightseagreen;
       margin: 10px;
     }
 
@@ -188,14 +231,12 @@ quote{
     }
     .card p {
       padding: 8px;
-      border: 1px solid blue;
       max-height: 175px;
-
 
     }
 
     .card:hover {
-      outline: 5px solid pink;
+      min-width: 320px;
     }
    }
 
@@ -216,6 +257,20 @@ quote{
         "ft ft";
       }
 
+      .sidebar{
+        grid-area: sb;
+        padding: 0 10px;
+        background-color:#C9B9AD;
+      }
+
+      .intro {
+        display: inline;
+      }
+      .intro p,
+      .intro h2 {
+        font-weight:200;
+      }
+
       .nav {
         display:flex;
         flex-direction: column;
@@ -223,7 +278,9 @@ quote{
         justify-content: flex-start;
         margin: none;
         position: relative;
-        top: 30%;
+        top: 5%;
+        line-height: 25px;
+
 
       }
       .nav li{
@@ -233,22 +290,24 @@ quote{
         text-align: left;
       }
 
+      .nav li:hover {
+        font-style:italic;
+      }
+
       .main{
         grid-area: main;
-        padding: 5px;
-        background-color:lightsteelblue;
+        background-color:#C9B9AD;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        grid-gap: 5px;
+        grid-gap: 20px;
         padding: 10px auto 10px;
-        max-height: 1000px;
+        max-height: 1100px;
         overflow-x: scroll;
       }
       .card {
         min-width: 300px;
-        background-color: lightseagreen;
         margin: 10px;
       }
 
@@ -263,13 +322,10 @@ quote{
       }
       .card p {
         padding: 8px;
-        border: 1px solid blue;
         max-height: 175px;
-
-
       }
 
       .card:hover {
-        outline: 5px solid pink;
+        min-width: 320px;
       }
      }

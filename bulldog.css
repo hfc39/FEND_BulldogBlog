@@ -128,7 +128,7 @@ quote{
   border-collapse: separate;
 }
 
- @media (min-width:600px) and (max-width:2000px){
+ @media (min-width:600px) and (max-width:1100px){
    .container{
      width:90%;
      height: 80vw;
@@ -158,3 +158,35 @@ quote{
     }
 
    }
+
+
+@media (min-width:1101px) {
+     .container{
+       width:90%;
+       height: 80vw;
+       grid-template-columns: 322px auto;
+       grid-template-rows: 150px auto 80px;
+       padding: 5px;
+       grid-template-areas:
+        "hd hd "
+        "sb main"
+        "ft ft";
+      }
+
+      .nav {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: none;
+        position: relative;
+        top: 30%;
+
+      }
+      .nav li{
+        list-style-type: none;
+        margin-left: 5px;
+        border: 1px solid black;
+        text-align: left;
+      }
+    }

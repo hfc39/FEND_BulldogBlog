@@ -47,7 +47,7 @@ quote{
   display: grid;
   background-color: azure;
   grid-template-columns: 1fr;
-  grid-template-rows: 150px auto auto 100px;
+  grid-template-rows: 150px auto auto auto;
   grid-gap: 5px;
   padding: 5px;
   margin:10px;
@@ -75,12 +75,42 @@ quote{
   grid-area: main;
   padding: 5px;
   background-color:lightsteelblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-gap: 5px;
+  padding: 10px auto 10px;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+.card {
+  max-width: 400px;
+  background-color: lightseagreen;
+  margin: 10px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  padding: 5px 8px 0;
+
+}
+.card p {
+  padding: 8px;
+  border: 1px solid blue;
 
 }
 
+.card:hover {
+  outline: 5px solid pink;
+}
 .footer{
   grid-area:ft;
-  padding: 5px;
+  padding: 10px;
   background-color:silver;
 }
 
@@ -116,14 +146,15 @@ quote{
       flex-wrap: wrap;
       justify-content: flex-start;
       margin: none;
+      position: relative;
+      top: 30%;
+
     }
     .nav li{
       list-style-type: none;
       margin-left: 5px;
       border: 1px solid black;
       text-align: left;
-
-
     }
 
    }

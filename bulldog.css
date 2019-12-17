@@ -50,9 +50,30 @@ a{
 .intro {
   display: none;
 }
-quote{
 
+button {
+	background-color: gold;
+	border-radius: 10%;
+  border: 3px outset gold;
+	position: relative;
+	left: 60%;
+	width: auto;
+	font-size: 14px;
+	padding: 5px 15px;
+	font-family: 'Roboto Slab', serif;
 }
+
+button a{
+	color: #232628;
+	text-decoration: none;
+}
+
+button a:hover {
+	color: #232628;
+	text-decoration: none;
+	font-style:italic;
+}
+
 
 .container{
   width:95%;

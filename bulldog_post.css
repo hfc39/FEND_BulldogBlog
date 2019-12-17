@@ -1,0 +1,55 @@
+body {
+	height: 100%;
+  background-color:#C9B9AD;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-family: 'Bree Serif','Roboto Slab', serif;
+  font-size: 40px;
+  color: #232628;
+}
+
+h1 hr {
+  /*border-bottom: 3px solid #232628;*/
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+h2,
+h3,
+h4{
+  font-family: 'Roboto Slab', serif;
+}
+
+p{
+  font-family: 'Roboto Slab', serif;
+  line-height: normal;
+  font-weight:400;
+  font-size: 14px;
+
+}
+
+b{
+  font-weight:bold;
+}
+
+em{
+  font-style:italic;
+}
+
+u{
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: underline;
+  color: #0000CD;
+}
+.intro {
+  display: none;
+}
+quote{
+
+}

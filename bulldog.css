@@ -11,7 +11,6 @@ h1 {
 }
 
 h1 hr {
-  /*border-bottom: 3px solid #232628;*/
   border: 0;
   height: 2px;
   background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
@@ -28,7 +27,6 @@ p{
   line-height: normal;
   font-weight:400;
   font-size: 14px;
-
 }
 
 b{
@@ -47,8 +45,109 @@ a{
   text-decoration: underline;
   color: #0000CD;
 }
+
+/*container*/
+.container{
+  width:95%;
+  display: grid;
+  background-color: #C9B9AD;
+  grid-template-columns: 1fr;
+  grid-template-rows: 130px auto auto auto;
+  grid-gap: 5px;
+  padding: 5px;
+  margin:10px;
+  grid-template-areas:
+    "hd"
+    "sb"
+    "main"
+    "ft";
+  }
+
+/* head section */
+header {
+    grid-area: hd;
+    color: firebrick;
+    padding: 10px 10px 10px;
+    background-color:#C9B9AD;
+  }
+
+/* sidebar section */
+.sidebar{
+  grid-area: sb;
+  padding: 10px;
+  background-color:#FAF5EF;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #232628;
+}
+
 .intro {
   display: none;
+}
+
+.nav {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+
+}
+.nav li{
+  height: 12px;
+  background-color: gold;
+  border-collapse: separate;
+}
+/* main section*/
+.main{
+  grid-area: main;
+  padding: 5px;
+  background-color:#C9B9AD;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-gap: 10px;
+  padding: 10px auto 10px;
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+
+.card {
+  max-width: 400px;
+  margin: 10px;
+  padding: auto;
+  border-radius: 8%;
+  border: 4px solid #FAF5EF;
+  background-color: #FAF5EF;
+}
+
+.card img {
+  max-width: 100%;
+  text-align : center;
+  margin: auto;
+  padding: auto;
+  border-radius: 10%;
+}
+
+.card h3 {
+  padding: 5px 8px 0;
+}
+
+.card p {
+  max-height: 175px;
+  padding: 8px;
+  background-color: none;
+}
+
+.card p a:hover {
+  background-color: gold;
+}
+
+.card:hover {
+  min-width: 320px;
 }
 
 button {
@@ -74,85 +173,7 @@ button a:hover {
 	font-style:italic;
 }
 
-
-.container{
-  width:95%;
-  display: grid;
-  background-color: #C9B9AD;
-  grid-template-columns: 1fr;
-  grid-template-rows: 130px auto auto auto;
-  grid-gap: 5px;
-  padding: 5px;
-  margin:10px;
-  grid-template-areas:
-    "hd"
-    "sb"
-    "main"
-    "ft";
-  }
-.head{
-    grid-area: hd;
-    color: firebrick;
-    padding: 10px 10px 10px;
-    background-color:#C9B9AD;
-  }
-
-.sidebar{
-  grid-area: sb;
-  padding: 10px;
-  background-color:#FAF5EF;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: #232628;
-}
-
-.main{
-  grid-area: main;
-  padding: 5px;
-  background-color:#C9B9AD;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  grid-gap: 10px;
-  padding: 10px auto 10px;
-  max-height: 1000px;
-  overflow-y: scroll;
-}
-.card {
-  max-width: 400px;
-  margin: 10px;
-  padding: auto;
-  border-radius: 8%;
-  border: 4px solid #FAF5EF;
-  background-color: #FAF5EF;
-}
-
-.card img {
-  max-width: 100%;
-  text-align : center;
-  margin: auto;
-  padding: auto;
-  border-radius: 10%;
-}
-
-.card h3 {
-  padding: 5px 8px 0;
-}
-.card p {
-  max-height: 175px;
-  padding: 8px;
-  background-color: none;
-}
-.card p a:hover {
-  background-color: gold;
-}
-
-.card:hover {
-  min-width: 320px;
-}
+/* footer section*/
 
 .footer{
   grid-area:ft;
@@ -161,21 +182,10 @@ button a:hover {
   text-align: center;
 }
 
-.nav {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
-
-}
-.nav li{
-  height: 12px;
-  background-color: gold;
-  border-collapse: separate;
-}
 /*Medium size monitor breakpoint*/
+
  @media (min-width:600px) and (max-width:860px){
+	 /* container section*/
    .container{
      width:auto;
      height: 90%;
@@ -187,6 +197,8 @@ button a:hover {
       "sb sb main main main main"
       "ft ft ft ft ft ft";
     }
+
+		/* sidebar section*/
     .sidebar{
       grid-area: sb;
       padding: 0 10px;
@@ -229,6 +241,7 @@ button a:hover {
       background-color: gold;
     }
 
+   /* main section*/
     .main{
       grid-area: main;
       padding: 5px;
@@ -242,6 +255,7 @@ button a:hover {
       max-height: 1100px;
       overflow-x: scroll;
     }
+
     .card {
       min-width: 300px;
       margin: 20px 10px 30px;
@@ -267,10 +281,9 @@ button a:hover {
     }
    }
 
-
 /*Large size monitor breakpoint*/
-
 @media (min-width:861px) {
+	/* container section*/
      .container{
        position: relative;
        width:auto;
@@ -283,7 +296,7 @@ button a:hover {
         "sb main"
         "ft ft";
       }
-
+	/* sidebar section*/
       .intro {
         display: inline;
       }
@@ -325,7 +338,7 @@ button a:hover {
         font-style:italic;
         background-color: gold;
       }
-
+	/* main section */
       .main{
         grid-area: main;
         background-color:#C9B9AD;
@@ -338,6 +351,7 @@ button a:hover {
         max-height: 1100px;
         overflow-x: scroll;
       }
+
       .card {
         min-width: 300px;
         margin: 20px 10px 30px;
@@ -352,6 +366,7 @@ button a:hover {
         padding: 5px 8px 0;
 
       }
+
       .card p {
         padding: 8px;
         max-height: 175px;

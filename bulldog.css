@@ -82,8 +82,9 @@ quote{
   background-color:#FAF5EF;
 }
 
-.sidebar a:hover {
-  background-color: gold;
+.sidebar a {
+  text-decoration: none;
+  color: #232628;
 }
 
 .main{
@@ -188,9 +189,8 @@ quote{
       position: relative;
       top: 5%;
       line-height: 25px;
-
-
     }
+
     .nav li{
       list-style-type: none;
       margin-left: 5px;
@@ -198,8 +198,14 @@ quote{
       text-align: left;
     }
 
-    .nav li:hover {
+    .nav a{
+      text-decoration: none;
+      color: #232628;
+    }
+
+    .nav a:hover {
       font-style:italic;
+      background-color: gold;
     }
 
     .main{
@@ -217,7 +223,7 @@ quote{
     }
     .card {
       min-width: 300px;
-      margin: 10px;
+      margin: 20px 10px 30px;
     }
 
     .card img {
@@ -236,7 +242,7 @@ quote{
     }
 
     .card:hover {
-      min-width: 320px;
+      width: 120%;
     }
    }
 
@@ -257,18 +263,18 @@ quote{
         "ft ft";
       }
 
-      .sidebar{
-        grid-area: sb;
-        padding: 0 10px;
-        background-color:#C9B9AD;
-      }
-
       .intro {
         display: inline;
       }
       .intro p,
       .intro h2 {
         font-weight:200;
+      }
+
+      .sidebar{
+        grid-area: sb;
+        padding: 0 10px;
+        background-color:#C9B9AD;
       }
 
       .nav {
@@ -280,9 +286,8 @@ quote{
         position: relative;
         top: 5%;
         line-height: 25px;
-
-
       }
+
       .nav li{
         list-style-type: none;
         margin-left: 5px;
@@ -290,8 +295,14 @@ quote{
         text-align: left;
       }
 
-      .nav li:hover {
+      .nav a{
+        text-decoration: none;
+        color: #232628;
+      }
+
+      .nav a:hover {
         font-style:italic;
+        background-color: gold;
       }
 
       .main{
@@ -308,7 +319,7 @@ quote{
       }
       .card {
         min-width: 300px;
-        margin: 10px;
+        margin: 20px 10px 30px;
       }
 
       .card img {
@@ -326,6 +337,6 @@ quote{
       }
 
       .card:hover {
-        min-width: 320px;
+        width: 120%;
       }
      }

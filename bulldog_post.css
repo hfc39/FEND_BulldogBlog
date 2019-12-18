@@ -118,6 +118,9 @@ article {
 article h5 {
 	font-weight:200;
 	font-size: 16px;
+	vertical-align: center;
+	padding:1px;
+	margin: 1px;
 }
 
 article h1 {
@@ -165,6 +168,28 @@ article figcaption p::before {
 	content:"↑";
 }
 
+.user {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding:1px;
+	margin: 1px;
+}
+
+.user img {
+	margin: 0 15px 0 5px;
+	width: 60px;
+	height:60px;
+	border-radius: 50%;
+}
+
+/*article h5 .user {
+	display: inline;
+	border-radius: 10%;
+	width: 80px;
+	height: 80px;*/
+}
 
 button {
 	background-color: gold;
@@ -276,6 +301,7 @@ button a:hover {
 			min-width: 90%;
 		}
 
+
    }
 
 /*Large size monitor breakpoint*/
@@ -360,4 +386,5 @@ button a:hover {
 				display: block;
 				margin: auto;
 			}
+
      }

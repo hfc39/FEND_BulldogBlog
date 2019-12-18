@@ -21,7 +21,8 @@ h3,
 h4{
   font-family: 'Roboto Slab', serif;
 }
-
+ul,
+li,
 p{
   font-family: 'Roboto Slab', serif;
   line-height: normal;
@@ -184,11 +185,16 @@ article figcaption p::before {
 	border-radius: 50%;
 }
 
-/*article h5 .user {
-	display: inline;
-	border-radius: 10%;
-	width: 80px;
-	height: 80px;*/
+#tag {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding:5px;
+	margin-top: 30px;
+}
+#tag div{
+	margin:5px;
+}
 }
 
 button {
